@@ -1,10 +1,10 @@
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println(sumDigits(10));
-        System.out.println(sumDigits(11));
-        System.out.println(sumDigits(121));
-        System.out.println(sumDigits(12221));
+        sumDigits(10);
+        sumDigits(11);
+        sumDigits(121);
+        sumDigits(12221);
     }
 
     public static int sumDigits(int number) {
@@ -33,6 +33,18 @@ public class Main {
             numAfterDivideByTen = numAfterDivideByTen / 10;
         }
         // This line of code is here because if only one digit is left, then we won't add that inside the loop, so we
+        // are adding it outside the loop.
+        sum += numAfterDivideByTen;
+        System.out.println("The sum of the digits " + number + " is " + sum);
+        return sum;
+
+    }
+
+    // Method to check a number is less than 10.
+    public static boolean isLessThanTen(int number) {
+        return (number < 10) ? true : false;
+    }
+}
         // are adding it outside the loop.
         sum += numAfterDivideByTen;
         return sum;
